@@ -1,0 +1,134 @@
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px; /* Increased size */
+    height: 500px; /* Increased height */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .chat-headers {
+    background: #39c6f9;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .chat-body {
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 350px; /* Increased height */
+    background: #f9f9f9;
+  }
+  
+  .message {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    max-width: 80%;
+  }
+  
+  .message.user {
+    background: #39c6f9;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .message.bot {
+    background: #e9ecef;
+    color: black;
+    align-self: flex-start;
+  }
+  
+  /* File Preview Moved to Middle */
+  .file-preview-container {
+    text-align: center;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    width: 90%;
+  }
+  
+  .preview-img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background: #fff;
+  }
+  
+  .chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .chat-footer button {
+    background: #39c6f9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  .chat-footer button:hover {
+    background-color: #226b86; /* Darker blue */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px #226b86;
+  }
+  
+  .file-input-label {
+    background: #39c6f9;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+  }
+  
+  .file-input-label:hover {
+    background-color: #226b86; /* Darker blue */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px #226b86;
+  }
+  /* Reduce the size of images sent in the chat */
+.message img {
+    max-width: 150px; /* Limit image width */
+    max-height: 150px; /* Limit image height */
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  

@@ -1,0 +1,48 @@
+.change {
+    background-color:rgb(232, 232, 232);
+    position: absolute;
+    right: 0;
+    bottom:0;
+    top: 100px;
+    height: calc(100vh - 123px);
+    width: calc(100% - 350px);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.378);
+    padding-left: 30px;
+    padding-right:30px;
+    margin-top:20px;
+    overflow: auto;   
+}
+
+::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in webkit browsers */
+}
+
+
+/* Responsive adjustments for small screens */
+@media (max-width: 1024px) {
+    .change {
+      width: calc(100% - 20vw); /* Decrease width slightly for tablets */
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .change {
+      width: 100%; /* Full width on smaller screens */
+      height: calc(100vh - 70px); /* Adjust for smaller screens */
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .change {
+      height: calc(100vh - 60px); /* Adjust height for very small screens */
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }

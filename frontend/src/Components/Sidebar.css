@@ -1,0 +1,272 @@
+.s-full {
+    background-color: #63b2cf;
+    height: 100vh;
+    width: 220px;
+    position: fixed; /* Fixed position to prevent movement */
+    left: 0;
+    top: -10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.378);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden; /* Ensure no scrolling inside sidebar */
+    transform: translateX(0); /* Sidebar is visible by default */
+    transition: transform 0.3s ease; /* Smooth transition when toggling */
+}
+
+.s-full.closed {
+    transform: translateX(-100%); /* Sidebar slides out of view */
+}
+
+.s-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: -200px;
+    gap: 5px;
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 90%;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #458197;
+}
+
+/* Icons inside links */
+.nav-link svg {
+    font-size: 22px;
+}
+
+hr {
+    width: 80%; /* Adjust width for spacing between buttons */
+    margin: 5px 0; /* Ensure proper spacing between button and line */
+    border: 0;
+    border-top: 1px solid #fff;
+    box-shadow: -1px -1px 8px rgb(0, 0, 0);
+}
+
+.s-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.logout-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #ffffff; /* Red background for logout */
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Ensures the button spans the full width */
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #226b86; /* Darker red on hover */
+    color: white; /* Ensures text remains white on hover */
+    box-shadow: 0px 10px 20px #226b86;
+}
+
+.logout-btn:active {
+    transform: scale(0.98); /* Slightly shrink the button on click */
+    transition: transform 0.1s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive Sidebar */
+
+
+@media (max-width: 1024px) {
+    .s-full {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .s-top img {
+        display: none;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .s-middle {
+        margin-top: 40px;
+    }
+
+    .nav-link span {
+        display: none; /* Hide text on mobile */
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Hide logo when on mobile */
+    .s-top img {
+        display: none;
+    }
+
+    /* Menu toggle button on mobile */
+    .menu-toggle {
+        display: block;
+        z-index: 30;
+        position: fixed;
+        /* top: 20px; */
+        /* left: 20px; */
+        margin-left: -10px;
+        margin-top: -5px;
+        cursor: pointer;
+        z-index: 40;
+    }
+
+    .s-full.closed {
+        transform: translateX(-100%); /* Hide sidebar off-screen when closed */
+    }
+
+    .s-full.open {
+        transform: translateX(0); /* Sidebar slides in when open */
+    }
+}
+@media (max-width: 768px) {
+    .s-full {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .s-top img {
+        display: none;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .s-middle {
+        margin-top: 40px;
+    }
+
+    .nav-link span {
+        display: none; /* Hide text on mobile */
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Hide logo when on mobile */
+    .s-top img {
+        display: none;
+    }
+
+    /* Menu toggle button on mobile */
+    .menu-toggle {
+        display: block;
+        z-index: 30;
+        position: fixed;
+        /* top: 20px; */
+        /* left: 20px; */
+        margin-left: -10px;
+        margin-top: -5px;
+        cursor: pointer;
+        z-index: 40;
+    }
+
+    .s-full.closed {
+        transform: translateX(-100%); /* Hide sidebar off-screen when closed */
+    }
+
+    .s-full.open {
+        transform: translateX(0); /* Sidebar slides in when open */
+    }
+}
+
+@media (max-width: 480px) {
+    .s-full {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .s-top img {
+        display: none;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .s-middle {
+        margin-top: 40px;
+    }
+
+    .nav-link span {
+        display: none; /* Hide text on mobile */
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Hide logo when on mobile */
+    .s-top img {
+        display: none;
+    }
+
+    /* Menu toggle button on mobile */
+    .menu-toggle {
+        display: block;
+        z-index: 30;
+        position: fixed;
+        /* top: 20px; */
+        /* left: 20px; */
+        margin-left: -10px;
+        margin-top: -5px;
+        cursor: pointer;
+        z-index: 40;
+    }
+
+    .s-full.closed {
+        transform: translateX(-100%); /* Hide sidebar off-screen when closed */
+    }
+
+    .s-full.open {
+        transform: translateX(0); /* Sidebar slides in when open */
+    }
+}

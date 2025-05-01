@@ -1,0 +1,144 @@
+
+.signup-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #63b2cf;
+    margin: -7px;
+    padding: 71px;
+  }
+  
+  .signup-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+  }
+  
+  .signup-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .signup-button {
+    width: 100%;
+    background-color: #63b2cf;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .signup-button:hover {
+    background-color: #4b89a0;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .login-link a {
+    color: #63b2cf;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+  /* Responsive styles for tablets and below */
+  @media (max-width: 1024px) {
+    .signup-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      height: 100vh;
+    }
+    .signup-container img{
+      display: none;
+    }
+    .signup-card {
+      width: 90%;
+      padding: 2rem;
+    }
+  
+    .signup-card {
+      width: 90%;
+      padding: 2rem;
+    }
+  }
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+  }
+  .signup-container img{
+    display: none;
+  }
+  .signup-card {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .signup-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1.5rem;
+    height: 100vh;
+  }
+
+  .signup-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .signup-container img{
+    display: none;
+  }
+
+  .signup-title {
+    font-size: 1.2rem;
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+  }
+
+  .signup-button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}

@@ -1,0 +1,24 @@
+.fullmainpage{
+    margin-top: 100px;
+}
+
+.change {
+    background-color:rgb(232, 232, 232);
+    position: absolute;
+    right: 0;
+    bottom:0;
+    height: calc(100vh - 150px);
+    width: calc(100% - 350px);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.378);
+    padding-left: 30px;
+    padding-right:30px;
+    padding-bottom:40px;
+    /* padding: 30px; */
+    margin-top:20px;
+    overflow: auto;   
+}
+
+::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in webkit browsers */
+}

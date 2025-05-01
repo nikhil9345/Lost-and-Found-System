@@ -1,0 +1,57 @@
+.opening-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #63b2cf, #4b89a0);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .opening-content {
+    max-width: 500px;
+  }
+  
+  .opening-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .opening-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .opening-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    background-color: white;
+    color: #63b2cf;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

@@ -1,0 +1,245 @@
+/* Navbar */
+.navbar {
+    background-color: #9bddf5;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100px;
+    width: calc(100% - 220px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Lost & Found Buttons */
+.lfbtn {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    margin-left: 100px; /* Moved slightly to the right */
+}
+
+.lost-btn, .found-btn {
+    padding: 10px 20px; /* Reduced padding for a smaller size */
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lost-btn,.found-btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.lost-btn:hover,.found-btn:hover {
+    background-color: #226b86;
+    color: white;
+    box-shadow: 0px 4px 10px #226b86;
+}
+.lost-btn.active,.found-btn.active {
+    background-color: #3598bc;
+    color: white;
+    box-shadow: 0px 4px 10px #226b86;
+  }
+/* Search Bar */
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #a4d4e6;
+    border-radius: 20px;
+    width: 450px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.search-bar input::placeholder {
+    color: #70bfe2;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.search-bar input:focus {
+    width: 450px;
+    border-color: #70bfe2;
+    box-shadow: 5px 5px 8px rgba(112, 191, 226, 0.4);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Reduced gap */
+    margin-right: 20px;
+}
+
+/* Notification Icon */
+.notification-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(124, 124, 124);
+    transition: transform 0.2s ease-in-out;
+}
+
+.notification-icon:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+
+/* Profile Picture */
+.profile-pics{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-pics:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+/* Responsive Design for Mobile and Smaller Screens */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 100%;
+        height: 80px;
+        padding: 0 15px;
+        font-size: 16px; /* Adjusted font size for medium screens */
+    }
+
+    .lfbtn {
+        margin-left: 50px;
+    }
+
+    .search-bar input {
+        width: 350px;
+    }
+
+    .search-bar input:focus {
+        width: 350px;
+    }
+
+    .nav-icons {
+        gap: 12px;
+    }
+
+    .profile-pics {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lost-btn, .found-btn {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: 70px;
+        padding: 0 10px;
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+
+    .lfbtn {
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px; /* Adjusted for smaller screens */
+    }
+
+    .lost-btn, .found-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .search-bar input {
+        width: 250px; /* Smaller width on mobile */
+    }
+
+    .search-bar input:focus {
+        width: 250px;
+    }
+
+    .profile-pics {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-icons {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+        padding: 0 5px;
+        font-size: 12px; /* Even smaller font size for mobile */
+    }
+
+    .lfbtn {
+        margin-left: 8px;
+        gap: 5px;
+        position: inherit;
+        display: flex;
+        flex-direction:row;
+        top: 65px;
+    }
+
+    .lost-btn, .found-btn {
+        font-size: 12px;
+        padding: 7px 12px;
+        background-color: rgb(204, 204, 204);
+    }
+
+    .search-bar input {
+        width: 200px; /* Further reduced for smaller devices */
+        margin-left: 50px;
+    }
+
+    .search-bar input:focus {
+        width: 200px;
+    }
+
+    .profile-pics {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-icons {
+        gap: 5px;
+    }
+}
+
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .menu-toggle:focus {
+    outline: none;
+  }
+  

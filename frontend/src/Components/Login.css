@@ -1,0 +1,144 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #63b2cf;
+    margin: -7px;
+    padding: 135.5px;
+  }
+  
+  .login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height:350px;
+  }
+  
+  .login-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .login-button {
+    width: 100%;
+    background-color:  #63b2cf;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #4b89a0;
+  }
+  
+  .forgot-password,
+  .signup-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .forgot-password a,
+  .signup-link a {
+    color: #63b2cf;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover,
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+  /* Responsive styles for tablets and below */
+  @media (max-width: 1024px) {
+    .login-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      height: 100vh;
+    }
+  
+    .login-container img{
+      display: none;
+    }
+  
+    .login-card {
+      width: 90%;
+      height: auto;
+    }
+  }
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+  }
+
+  .login-container img{
+    display: none;
+  }
+
+  .login-card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+    height: 100vh;
+  }
+
+  .login-container img{
+    display: none;
+  }
+  .login-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.2rem;
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+  }
+
+  .login-button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}

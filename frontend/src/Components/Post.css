@@ -1,0 +1,238 @@
+/* Center the form and give it a clean layout */
+.content {
+    max-width: 500px;
+    margin: 5px auto; /* Centered form */
+    background: #ffffff;
+    padding-top: 25px;
+    padding-left: 45px;
+    padding-bottom: 45px;
+    padding-right: 45px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add slight hover effect to the form */
+.content:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Form title */
+h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Form fields layout */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 150px;
+    text-align: right;
+}
+
+/* Input fields */
+.form-control,
+select.form-control,
+textarea.form-control,
+input[type="file"] {
+    flex: 1;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+/* Textarea: Same height as input fields */
+textarea.form-control {
+    resize: vertical;
+    min-height: 45px;
+}
+
+/* Image preview */
+.img-preview {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.img-preview img {
+    max-width: 100%;
+    max-height: 180px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Submit button */
+.submitbtn {
+    background-color: #007bff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Hover effect for button */
+.submitbtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+/* Tablets and smaller desktop screens */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 80%;
+        padding: 30px;
+        margin: 0 auto; /* Center content horizontally */
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .form-label {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Tablets & smaller screens (768px and below) */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+        padding: 25px;
+        margin: 0 auto; /* Center content horizontally */
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 15px;
+        width: 100%; /* Ensure form controls take up full width */
+    }
+
+    .submitbtn {
+        padding: 12px;
+        font-size: 15px;
+        width: 100%; /* Full-width submit button */
+    }
+
+    /* Card layout for smaller screens */
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        width: 100%; /* Ensure card takes full width */
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 15px; /* Add space below image */
+    }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .content {
+        max-width: 95%;
+        padding: 15px;
+        margin: 0 auto; /* Center content horizontally */
+        margin-left: 38px;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%; /* Ensure form controls take up full width */
+    }
+
+    .submitbtn {
+        padding: 12px;
+        font-size: 14px;
+        width: 100%; /* Full-width submit button */
+    }
+
+    /* Card layout for mobile screens */
+    .card {
+        padding: 10px;
+        width: 100%; /* Full-width card */
+    }
+
+    .card img {
+        max-width: 200px; /* Make the image smaller on mobile */
+        margin-bottom: 10px; /* Ensure there's space below the image */
+    }
+
+    /* Improve readability on mobile */
+    .form-label,
+    .form-group {
+        font-size: 14px; /* Reduce font size for labels */
+        width: 100%;
+    }
+
+    /* Center the submit button on mobile screens */
+    .submitbtn {
+        display: block;
+        margin: 15px auto; /* Center the submit button */
+    }
+}
+
+
+/* Image remove button */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.399);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
