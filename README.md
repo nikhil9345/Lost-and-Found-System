@@ -47,7 +47,7 @@ A full-stack web application designed to help users report and recover lost or f
 ![Login Page](frontend/assets/login.png)
 
 ### 💬 Chat Interface
-![Chat Page](frontend/assets/chat.png)
+![Chat Page](frontend/src/assets/Screenshot 2025-04-20 215733.png)
 
 ### 🗄 Database:
 - MongoDB Atlas
