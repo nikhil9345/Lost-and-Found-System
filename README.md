@@ -41,7 +41,7 @@ A full-stack web application designed to help users report and recover lost or f
 ## 🖼 Screenshots
 
 ### 🏠 Home Page
-![Home Page](frontend/assets/home.png)
+![Home Page](frontend/src/assets/Screenshot 2025-04-20 215627.png)
 
 ### 🔐 Login Page
 ![Login Page](frontend/assets/login.png)
