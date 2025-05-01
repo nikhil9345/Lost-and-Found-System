@@ -62,9 +62,11 @@ npm start
 cd frontend
 npm rundev
 ### create an env file and add them
-PORT=5000
+PORT=5002
 MONGODB_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
+EMAIL_USER=admin email id 
+EMAIL_PASS=get the pass code for email pass
 
 ### 🔃 Clone the Repo
 ```bash
