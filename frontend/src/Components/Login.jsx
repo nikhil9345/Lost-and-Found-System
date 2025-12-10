@@ -13,7 +13,7 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
   
     try {
-      const response = await axios.post("http://localhost:5002/api/auth/login", {
+      const response = await axios.post("https://lost-and-found-system-lf77.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -28,7 +28,7 @@ const Login = ({ setIsAuthenticated }) => {
         alert("Login successful!");
         if (email.includes('@discover')) {
           // Optionally, verify if this email exists in the admin database
-          const adminCheckResponse = await axios.get(`http://localhost:5002/api/users/${localStorage.getItem("id")}`);
+          const adminCheckResponse = await axios.get(`https://lost-and-found-system-lf77.onrender.com/api/users/${localStorage.getItem("id")}`);
           
           if (adminCheckResponse.status === 200) {
             // Redirect to admin page if admin check passes
