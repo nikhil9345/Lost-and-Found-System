@@ -18,7 +18,7 @@ const CategoryPosts = ({ searchQuery, statusFilter }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:5002/api/posts", {
+        const response = await axios.get("https://lost-and-found-system-lf77.onrender.com/api/posts", {
           params: { category: category.trim() },
         });
 
@@ -109,7 +109,7 @@ const CategoryPosts = ({ searchQuery, statusFilter }) => {
                 onMouseLeave={() => setHoveredPost(null)}
               >
                 <img 
-                  src={`http://localhost:5002${post.images[0]}`} 
+                  src={`https://lost-and-found-system-lf77.onrender.com${post.images[0]}`} 
                   alt={post.itemName} 
                   height={250} 
                   width={250} 
@@ -143,7 +143,7 @@ const CategoryPosts = ({ searchQuery, statusFilter }) => {
         <div className="image-viewer-overlay">
           <button className="close-btn" onClick={closeViewer}>X</button>
           <button className="prev" onClick={prevImage}>&#10094;</button>
-          <img src={`http://localhost:5002${viewerImages[currentIndex]}`} alt="Preview" className="viewer-image" />
+          <img src={`https://lost-and-found-system-lf77.onrender.com${viewerImages[currentIndex]}`} alt="Preview" className="viewer-image" />
           <button className="next" onClick={nextImage}>&#10095;</button>
         </div>
       )}

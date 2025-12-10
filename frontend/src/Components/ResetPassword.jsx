@@ -23,7 +23,7 @@ const ResetPassword = () => {
     try {
       console.log("Reset token from URL:", token);
       const res = await axios.post(
-        `http://localhost:5002/api/auth/reset-password/${token}`,
+        `https://lost-and-found-system-lf77.onrender.com/api/auth/reset-password/${token}`,
         { newPassword }
       );
 

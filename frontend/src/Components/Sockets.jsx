@@ -16,7 +16,7 @@ export const SocketProvider = ({ children }) => {
     setCurrentUser(user);
 
     // Create socket connection
-    const newSocket = io('http://localhost:5002');
+    const newSocket = io('https://lost-and-found-system-lf77.onrender.com');
     
     newSocket.on('connect', () => {
       console.log('Connected to socket server');

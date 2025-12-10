@@ -20,7 +20,7 @@ const Profile = ({ searchQuery, statusFilter }) => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5002/api/auth/profile", {
+        const response = await axios.get("https://lost-and-found-system-lf77.onrender.com/api/auth/profile", {
           headers: { Authorization: token }
         });
 
@@ -31,7 +31,7 @@ const Profile = ({ searchQuery, statusFilter }) => {
           phone: response.data.phone,
         });
 
-        const postsResponse = await axios.get("http://localhost:5002/api/posts/user", {
+        const postsResponse = await axios.get("https://lost-and-found-system-lf77.onrender.com/api/posts/user", {
           headers: { Authorization: token }
         });
 
@@ -66,7 +66,7 @@ const Profile = ({ searchQuery, statusFilter }) => {
         avatar: newAvatar || user.avatar
       };
 
-      const response = await axios.put("http://localhost:5002/api/auth/update-profile", updatedData, {
+      const response = await axios.put("https://lost-and-found-system-lf77.onrender.com/api/auth/update-profile", updatedData, {
         headers: { Authorization: token }
       });
 
@@ -87,7 +87,7 @@ const Profile = ({ searchQuery, statusFilter }) => {
   const handleDelete = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5002/api/posts/${postId}`, {
+      await axios.delete(`https://lost-and-found-system-lf77.onrender.com/api/posts/${postId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPosts(posts.filter(post => post._id !== postId));
@@ -172,7 +172,7 @@ const Profile = ({ searchQuery, statusFilter }) => {
               <div className="post-content">
                 <div className="post-image-container">
                   {post.images[0] && (
-                    <img src={`http://localhost:5002${post.images[0]}`} alt="Post" className="post-image" />
+                    <img src={`https://lost-and-found-system-lf77.onrender.com${post.images[0]}`} alt="Post" className="post-image" />
                   )}
                 </div>
 

@@ -334,11 +334,11 @@ const ChatSection = ({ searchQuery }) => {
         if (!userId) return;
 
         // Fetch contacts
-        axios.get(`http://localhost:5002/api/users/all/${userId}`)
+        axios.get(`https://lost-and-found-system-lf77.onrender.com/api/users/all/${userId}`)
             .then((response) => setContacts(response.data.users))
             .catch((error) => console.error("Error fetching users:", error));
 
-        socket = io("http://localhost:5002");
+        socket = io("https://lost-and-found-system-lf77.onrender.com");
         socket.emit("userJoined", userId);
 
         socket.on("receiveMessage", (message) => {
@@ -382,7 +382,7 @@ const ChatSection = ({ searchQuery }) => {
                 if (!to) return;
 
                 const response = await axios.post(
-                    "http://localhost:5002/api/chat/getmsg",
+                    "https://lost-and-found-system-lf77.onrender.com/api/chat/getmsg",
                     { from, to },
                     { headers: { Authorization: token } }
                 );
@@ -435,11 +435,11 @@ const ChatSection = ({ searchQuery }) => {
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);
-                const uploadRes = await axios.post("http://localhost:5002/api/chat/upload", formData);
+                const uploadRes = await axios.post("https://lost-and-found-system-lf77.onrender.com/api/chat/upload", formData);
                 fileData = uploadRes.data;
             }
 
-            await axios.post("http://localhost:5002/api/chat/addmsg", {
+            await axios.post("https://lost-and-found-system-lf77.onrender.com/api/chat/addmsg", {
                 from: userId,
                 to: recipientId,
                 message: msg,

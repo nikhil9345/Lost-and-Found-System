@@ -44,8 +44,8 @@ const Admin = () => {
     const fetchData = async () => {
       try {
         const [postRes, userRes] = await Promise.all([
-          axios.get("http://localhost:5002/api/posts"),
-          axios.get("http://localhost:5002/api/users/all"),
+          axios.get("https://lost-and-found-system-lf77.onrender.com/api/posts"),
+          axios.get("https://lost-and-found-system-lf77.onrender.com/api/users/all"),
         ]);
         setPosts(postRes.data);
         
@@ -86,7 +86,7 @@ const Admin = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5002/api/posts/admin/${id}`,
+        `https://lost-and-found-system-lf77.onrender.com/api/posts/admin/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // Ensure token is included in request
@@ -104,7 +104,7 @@ const Admin = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5002/api/users/${id}`);
+      await axios.delete(`https://lost-and-found-system-lf77.onrender.com/api/users/${id}`);
       setUsers((prev) => prev.filter((user) => user._id !== id));
       alert("User deleted successfully!");
     } catch (err) {
@@ -156,7 +156,7 @@ const Admin = () => {
                 onMouseLeave={() => setHoveredPost(null)}
               >
                 <img
-                  src={`http://localhost:5002${post.images[0]}`}
+                  src={`https://lost-and-found-system-lf77.onrender.com${post.images[0]}`}
                   alt={post.itemName}
                   className="admin-post-image"
                   onClick={() => openViewer(post.images, 0)}
@@ -204,7 +204,7 @@ const Admin = () => {
           <button className="admin-viewer-close" onClick={closeViewer}>X</button>
           <button className="admin-viewer-nav left" onClick={prevImage}>&#10094;</button>
           <img
-            src={`http://localhost:5002${viewerImages[currentIndex]}`}
+            src={`https://lost-and-found-system-lf77.onrender.com${viewerImages[currentIndex]}`}
             alt="Preview"
             className="admin-viewer-image"
           />

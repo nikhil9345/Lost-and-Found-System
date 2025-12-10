@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5002/api/auth/forgot-password", { email });
+      const res = await axios.post("https://lost-and-found-system-lf77.onrender.com/api/auth/forgot-password", { email });
       setMessage(res.data.message);
       setEmail("");
     } catch (err) {

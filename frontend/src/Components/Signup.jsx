@@ -15,7 +15,7 @@ const Signup = ({ setIsAuthenticated }) => {
       e.preventDefault();
 
       try {
-          const response = await axios.post("http://localhost:5002/api/auth/register", {
+          const response = await axios.post("https://lost-and-found-system-lf77.onrender.com/api/auth/register", {
               username, email, phone, password
           });
           alert("Signup successful! Please log in.");

@@ -52,7 +52,7 @@ const LostAndFoundForm = () => {
     formData.images.forEach((image) => data.append("images", image));
 
     try {
-      const response = await axios.post("http://localhost:5002/api/posts", data, {
+      const response = await axios.post("https://lost-and-found-system-lf77.onrender.com/api/posts", data, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: localStorage.getItem("token"),

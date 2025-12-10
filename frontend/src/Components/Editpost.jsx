@@ -23,7 +23,7 @@ const EditPost = () => {
     const fetchPost = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:5002/api/posts/${postId}`, {
+        const response = await axios.get(`https://lost-and-found-system-lf77.onrender.com/api/posts/${postId}`, {
           headers: { Authorization: token },
         });
 
@@ -82,7 +82,7 @@ const EditPost = () => {
     });
 
     try {
-      const response = await axios.put(`http://localhost:5002/api/posts/${postId}`, submissionData, {
+      const response = await axios.put(`https://lost-and-found-system-lf77.onrender.com/api/posts/${postId}`, submissionData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: token,
@@ -143,7 +143,7 @@ const EditPost = () => {
             <div className="d-flex flex-wrap gap-2">
               {formData.existingImages.map((img, index) => (
                 <div key={index} className="image-container position-relative">
-                  <img src={`http://localhost:5002${img}`} alt={`Existing ${index}`} className="img-thumbnail" width="100" />
+                  <img src={`https://lost-and-found-system-lf77.onrender.com${img}`} alt={`Existing ${index}`} className="img-thumbnail" width="100" />
                   <button type="button" className="remove-image" onClick={() => handleRemoveExistingImage(index)}>
                     x
                   </button>
