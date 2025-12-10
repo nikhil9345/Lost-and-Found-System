@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ChatBox.css";
+import "./Chatbox.css";
 
 const ChatBox = ({ user, onClose }) => {
   const [messages, setMessages] = useState([]);
